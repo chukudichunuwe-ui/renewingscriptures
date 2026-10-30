@@ -1,0 +1,13 @@
+{
+  "name": "renewingscriptures-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix renewingscriptures run dev",
+    "build": "npm --prefix renewingscriptures run build",
+    "lint": "npm --prefix renewingscriptures run lint",
+    "preview": "npm --prefix renewingscriptures run preview"
+  },
+  "dependencies": {
+    "react-router-dom": "^7.18.5"
+  }
+}

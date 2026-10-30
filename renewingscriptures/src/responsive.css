@@ -1,0 +1,236 @@
+/* Shared responsive refinements for the reader and reading plan views. */
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  .plans-page {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .plans-prompt {
+    grid-template-columns: 28px 1fr;
+  }
+
+  .plans-prompt > p {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 680px) {
+  .plans-page {
+    min-height: calc(100vh - 64px);
+    padding: 20px 16px 48px;
+  }
+
+  .plans-hero {
+    min-height: 245px;
+    padding: 30px 25px;
+  }
+
+  .plans-hero h1,
+  .directory-intro h1,
+  .plan-detail-copy h1 {
+    font-size: clamp(30px, 8vw, 39px);
+  }
+
+  .plans-hero-art {
+    right: -38px;
+    opacity: .55;
+  }
+
+  .category-grid,
+  .directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .directory-toolbar,
+  .plans-section-title,
+  .plan-schedule-head {
+    align-items: flex-start;
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  .directory-search {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .plan-detail-hero {
+    min-height: 205px;
+    padding: 28px 23px;
+  }
+
+  .plan-detail-art {
+    right: -45px;
+    opacity: .45;
+  }
+
+  .plan-stats {
+    flex-wrap: wrap;
+  }
+
+  .day-card {
+    gap: 10px;
+    padding: 15px 13px;
+  }
+
+  .day-list {
+    grid-template-columns: 1fr;
+  }
+
+  .chron-plan-card {
+    gap: 13px;
+    padding: 17px;
+  }
+
+  .chron-card-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .reader-tools {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .select-wrap select {
+    max-width: 125px;
+  }
+
+  .topic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .topbar {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .brand {
+    gap: 7px;
+    font-size: 14px;
+  }
+
+  .brand-mark {
+    width: 25px;
+    height: 25px;
+  }
+
+  .welcome {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .welcome h1 {
+    font-size: clamp(35px, 10vw, 42px);
+  }
+
+  .content-wrap {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .reader-toolbar {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .reader-body {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .crumb {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .reader-tools {
+    gap: 2px;
+  }
+
+  .tool-divider {
+    margin: 0 2px;
+  }
+
+  .reader-tools .icon-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .topic-grid,
+  .category-grid,
+  .directory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topic-card {
+    min-height: 120px;
+  }
+
+  .plans-page {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .plans-hero {
+    padding: 26px 19px;
+  }
+
+  .plans-section-title h2,
+  .directory-toolbar h2,
+  .plan-schedule-head h2 {
+    font-size: 23px;
+  }
+
+  .chron-plan-card {
+    align-items: flex-start;
+  }
+
+  .plan-open-arrow {
+    padding-top: 8px;
+  }
+
+  .search-dialog {
+    padding: 16px;
+  }
+
+  .search-title h2 {
+    font-size: 20px;
+  }
+
+  .search-result small {
+    max-width: min(60vw, 250px);
+  }
+}
+
+.join-us-button{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:11px 16px;border:0;border-radius:4px;background:#526a4a;color:#fff;font-size:11px;font-weight:600}.join-us-button:hover{background:#43593d}.join-overlay{position:fixed;inset:0;z-index:30;display:grid;place-items:center;padding:20px;background:rgba(24,29,22,.48);backdrop-filter:blur(3px)}.join-dialog{position:relative;width:min(100%,440px);padding:35px;background:var(--paper,#fff);border:1px solid var(--line,#e8e9e1);border-radius:8px;box-shadow:0 18px 60px rgba(0,0,0,.18);color:var(--ink,#292d27)}.join-close{position:absolute;right:14px;top:14px}.join-dialog h2{font:400 30px/1.15 'DM Serif Display',serif;margin:10px 0}.join-intro,.join-success>p:not(.section-kicker){font-size:12px;line-height:1.7;color:var(--muted,#858a7e)}.join-dialog form{display:grid;gap:14px;margin-top:21px}.join-dialog form label{display:grid;gap:6px;font-size:10px;font-weight:600}.join-dialog input{width:100%;height:42px;padding:0 11px;border:1px solid var(--line,#e8e9e1);border-radius:4px;background:var(--wash,#f7f7f3);color:var(--ink,#292d27);font:12px 'DM Sans',sans-serif}.join-submit{display:inline-flex;justify-content:center;align-items:center;gap:9px;min-height:43px;margin-top:4px;padding:0 16px;border:0;border-radius:4px;background:#526a4a;color:white;font-size:11px;font-weight:600}.join-storage-note{font-size:9px;line-height:1.5;color:var(--muted,#858a7e);margin:13px 0 0}.join-success{text-align:center;padding:10px 0}.join-success>span{display:block;font-size:29px;color:#809375;margin-bottom:10px}.join-success .join-submit{min-width:160px;margin-top:12px}.dark .join-dialog{background:#252b24;border-color:#363d34;color:#e8e9e2}.dark .join-dialog input{background:#1f251f;border-color:#40473e;color:#eee}
+
+.stats-section{max-width:1124px;margin:40px auto 0;padding:0 16px 48px}.stats-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,420px);align-items:end;column-gap:25px}.stats-heading .section-kicker{grid-column:1/-1;margin:0 0 8px}.stats-heading h2{font:400 26px 'DM Serif Display',serif;margin:0}.stats-heading>p:last-child{font-size:11px;line-height:1.65;color:var(--muted);margin:0}.stats-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin-top:17px}.stats-grid article{display:grid;gap:8px;min-height:118px;padding:17px;background:var(--paper);border:1px solid var(--line);border-radius:6px}.stats-grid article>span{font-size:8px;letter-spacing:1px;font-weight:700;color:#85917d}.stats-grid article>strong{font:400 29px 'DM Serif Display',serif;color:var(--ink)}.stats-grid article>strong i{font:400 12px 'DM Sans',sans-serif;color:var(--muted);font-style:normal}.stats-grid article>small{font-size:9px;line-height:1.5;color:var(--muted)}.dark .stats-grid article{background:#252b24;border-color:#363d34}
+.memory-verse-copy{max-width:285px;font-size:18px!important;line-height:1.42!important;overflow-wrap:anywhere}.note-icon{font-size:9px!important;letter-spacing:1.3px;font-weight:700}
+
+@media(max-width:520px){.join-dialog{padding:29px 22px}.join-dialog h2{font-size:26px}.join-us-button{margin-top:14px}}
+@media(max-width:680px){.stats-section{margin-top:28px;padding-right:16px;padding-left:16px}.stats-heading{grid-template-columns:1fr;gap:7px}.stats-heading .section-kicker{margin-bottom:2px}.stats-heading>p:last-child{max-width:480px}.stats-grid{grid-template-columns:1fr}.stats-grid article{min-height:98px}}
